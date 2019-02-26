@@ -17,12 +17,49 @@
 @import "bootstrap";
 @import "font-awesome";
 
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
 .container {
   padding-top: 5%;
 }
 
+.well {
+  overflow: auto;
+}
+
+.well .price::before {
+  content: "\A";
+  white-space: pre;
+}
+
+.well h3 {
+  display: inline-block;
+  font-weight: 500;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgb(2, 146, 86);
+  text-transform: capitalize;
+}
+
+.well a:hover {
+  text-decoration: none;
+  background-color: yellow;
+}
+
 .well img {
+  margin-right: 1rem;
   object-fit: cover;
   width: 150px;
   height: 150px;
+  float: left;
+}
+
+.right {
+  position: relative;
+  top: -2.5rem;
+}
+
+.well a {
+  color: rgb(2, 146, 86) !important;
 }

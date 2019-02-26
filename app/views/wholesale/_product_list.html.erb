@@ -7,10 +7,11 @@
                         <%= image_tag product.image.url %>
                     <% end %>
                 <% end %>
-
-                <h3><%= link_to product.name, product %></h3>
-                <p><%= number_to_currency product.price %></p>
-                <p><a href="#" data-toggle="modal" data-target="#myModal_<%= product.id %>"><span class="glyphicon glyphicon-plus"></span> Quick Info</a></p>
+                <div class="right">
+                    <h3><%= link_to product.name, product %></h3>
+                    <span class="price"><%= number_to_currency product.price %> per </span><span><%= product.unit %></span>
+                    <p><a href="#" data-toggle="modal" data-target="#myModal_<%= product.id %>"><span class="glyphicon glyphicon-plus"></span> Quick Info</a></p>
+                </div>
             </div>
         </div>
 
