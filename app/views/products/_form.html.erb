@@ -1,7 +1,9 @@
 <%= form_with(model: product, local: true) do |form| %>
   <% if product.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+      <h2>
+        <%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:
+      </h2>
 
       <ul>
       <% product.errors.full_messages.each do |message| %>
@@ -12,33 +14,33 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :name, "Product Name" %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :unit %>
+    <%= form.label :unit, "Quantity Unit" %>
     <%= form.text_field :unit, placeholder: "lbs, oz, etc" %>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
+    <%= form.label :price, "Price Per Unit" %>
     <%= form.text_field :price %>
   </div>
 
   <div class="field">
-    <%= form.label :quantity %>
+    <%= form.label :quantity, "Quantity In Stock" %>
     <%= form.number_field :quantity %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label :description, "Description Of Product" %>
     <%= form.text_area :description %>
   </div>
 
   <div class="field">
-    <%= form.label :category_id %>
-    <%= form.select :category_id, @categories.collect{ |c| [c.name, c.id] }, { include_blank: "Please select a category"} %>
+    <%= form.label :category_id, "Product Category" %>
+    <%= form.select :category_id, @categories.collect{ |c| [c.name, c.id] }, { include_blank: "Select a category"} %>
   </div>
 
   <div class="field">
@@ -51,6 +53,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
