@@ -27,6 +27,10 @@ body {
 
 .well {
   overflow: auto;
+  background-color: none;
+  background-image: url(pattern.jpg);
+  background-repeat: repeat;
+  border: none;
 }
 
 .well .price::before {
