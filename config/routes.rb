@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'epicenter/feed'
-  get 'epicenter/show_user'
-  get 'epicenter/now_following'
-  get 'epicenter/unfollow'
+  get 'feed' => 'epicenter#feed'
+  get 'show_user' => 'epicenter#show_user'
+  get 'following' => 'epicenter#now_following'
+  get 'unfollow' => 'epicenter#unfollow'
   get 'store' => 'wholesale#all_products'
   get 'categories' => 'wholesale#products_by_category'
   get 'vendors' => 'wholesale#products_by_vendor'
