@@ -13,7 +13,14 @@
  *= require_tree .
  *= require_self
  */
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+.container {
+  padding-top: 5%;
+}
+
+.well img {
+  width: 100%;
+}
