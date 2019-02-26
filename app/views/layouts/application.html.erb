@@ -29,8 +29,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li>
-              <%= link_to new_product_path do %>
-                <span>New Product</span>
+              <% if user_signed_in? %>
+                <%= link_to new_product_path do %>
+                  <span>New Product</span>
+                <% end %>
               <% end %>
             </li>
             <!-- Vendors -->
@@ -39,6 +41,15 @@
               <ul class=dropdown-menu>
                 <% @vendors.each do |vendor| %>
                   <li><%= link_to vendor.company, vendors_path(user_id: vendor.id) %></li>
+                <% end %>
+              </ul>
+            </li>
+            <!-- Categories -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expaned="false">Categories</a>
+              <ul class=dropdown-menu>
+                <% @categories.each do |category| %>
+                  <li><%= link_to category.name, categories_path(category_id: category.id) %></li>
                 <% end %>
               </ul>
             </li>

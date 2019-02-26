@@ -4,7 +4,8 @@ class WholesaleController < ApplicationController
   end
 
   def products_by_category
-
+    @category = Category.find(params[:category_id])
+    @products = Product.where(category_id: params[:category_id])
   end
 
   def products_by_vendor
