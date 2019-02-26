@@ -17,13 +17,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price %>
+    <%= form.label :unit %>
+    <%= form.text_field :unit, placeholder: "lbs, oz, etc" %>
   </div>
 
   <div class="field">
-    <%= form.label :unit %>
-    <%= form.text_field :unit %>
+    <%= form.label :price %>
+    <%= form.text_field :price %>
   </div>
 
   <div class="field">
@@ -38,12 +38,16 @@
 
   <div class="field">
     <%= form.label :category_id %>
-    <%= form.number_field :category_id %>
+    <%= form.select :category_id, @categories.collect{ |c| [c.name, c.id] }, { include_blank: "Please select a category"} %>
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
+    <%= form.hidden_field :user_id, value: current_user.id %>
+  </div>
+
+  <div class="form-group">
+    <strong>Upload Product Image: </strong>
+    <%= form.file_field :image %>
   </div>
 
   <div class="actions">
