@@ -28,6 +28,11 @@
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
+  <div class="form-group">
+    <strong>Upload a Profile Pic:</strong>
+    <%= f.file_field :avatar %>
+  </div>
+
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
