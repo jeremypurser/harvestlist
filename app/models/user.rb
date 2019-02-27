@@ -6,5 +6,6 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true
   has_many :products
   serialize :following, Array
+  mount_uploader :avatar, AvatarUploader
   # mount_uploader :avatar, AvatarUploader
 end
