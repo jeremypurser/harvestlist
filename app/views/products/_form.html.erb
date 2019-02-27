@@ -1,58 +1,68 @@
-<%= form_with(model: product, local: true) do |form| %>
-  <% if product.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:
-      </h2>
+<div class="row">
+  <div class="col-lg-4 col-md-4">
+    <%= form_with(model: product, local: true) do |form| %>
+      <% if product.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:
+          </h2>
 
-      <ul>
-      <% product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+          <% product.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= form.label :name, "Product Name" %>
-    <%= form.text_field :name %>
-  </div>
+      <div class="field form-group">
+        <%= form.label :name, "Product Name" %>
+        <%= form.text_field :name, placeholder: "e.g. Spinach", class: "form-control" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :unit, "Quantity Unit" %>
-    <%= form.text_field :unit, placeholder: "lb, oz, etc" %>
-  </div>
+      <div class="field form-group">
+        <%= form.label :unit, "Quantity Unit" %>
+        <%= form.text_field :unit, placeholder: "lb, oz, etc", class: "form-control" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :price, "Price Per Unit" %>
-    <%= form.text_field :price %>
-  </div>
+      <form class="form-inline">
+        <div class="field form-group">
+          <%= form.label :price, "Price Per Unit" %>
+          <div class="input-group">
+            <div class="input-group-addon">$</div>
+            <%= form.text_field :price, placeholder: "0.00", class: "form-control" %>
+          </div>
+        </div>
+      </form>
 
-  <div class="field">
-    <%= form.label :quantity, "Quantity Available" %>
-    <%= form.number_field :quantity %>
-  </div>
+      <div class="field form-group">
+        <%= form.label :quantity, "Quantity Available" %>
+        <%= form.text_field :quantity, placeholder: "10, 25, etc", class: "form-control", 
+        rows: "20" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :description, "Notes" %>
-    <%= form.text_area :description %>
-  </div>
+      <div class="field form-group">
+        <%= form.label :description, "Notes" %>
+        <%= form.text_area :description, class: "form-control", placeholder: "e.g. Date picked, variety, product description" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :category_id, "Product Category" %>
-    <%= form.select :category_id, @categories.collect{ |c| [c.name, c.id] }, { include_blank: "Select a category"} %>
-  </div>
+      <div class="field form-group">
+        <%= form.label :category_id, "Product Category" %>
+        <%= form.select :category_id, @categories.collect{ |c| [c.name, c.id] }, { include_blank: "Select a category"} %>
+      </div>
 
-  <div class="field">
-    <%= form.hidden_field :user_id, value: current_user.id %>
-  </div>
+      <div class="field form-group">
+        <%= form.hidden_field :user_id, value: current_user.id %>
+      </div>
 
-  <div class="form-group">
-    <span>Upload Product Image: </span>
-    <%= form.file_field :image, class: "image-upload" %>
-  </div>
+      <div class="form-group">
+        <span>Upload Product Image: </span>
+        <%= form.file_field :image, class: "image-upload" %>
+      </div>
 
-  <div class="actions">
-    <%= form.submit class: "btn btn-primary" %>
+      <div class="actions">
+        <%= form.submit class: "btn btn-primary" %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
