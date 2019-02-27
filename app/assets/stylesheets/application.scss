@@ -25,17 +25,28 @@ body {
   padding-top: 5%;
 }
 
+// Form
+
+label {
+  font-weight: 300;
+}
+
+.image-upload {
+  padding: 3px;
+  font-size: 1rem;
+}
+
+// Product List /
+
 .well {
   overflow: auto;
   background-color: none;
-  background-image: url(pattern.jpg);
   background-repeat: repeat;
   border: none;
 }
 
-.well .price::before {
-  content: "\A";
-  white-space: pre;
+.well:hover {
+  background-image: url(pattern.gif);
 }
 
 .well h3 {
