@@ -1,5 +1,6 @@
 <div class="row">
     <% @products.each do |product| %>
+        
         <div class="col-lg-4 col-md-4">
             <div class="well">
                 <% if product.image.url.blank? == false %>
@@ -9,12 +10,13 @@
                 <% end %>
                 <div class="right">
                     <h3><%= link_to product.name, product %></h3>
-                    <p><%= link_to product.user.company, product %></p>
+                    <p><%= link_to product.user.company, vendors_path(user_id: product.user_id) %></p>
                     <span class="price"><%= number_to_currency product.price %> per </span><span><%= product.unit %></span>
                     <p><a href="#" data-toggle="modal" data-target="#myModal_<%= product.id %>"><span class="glyphicon glyphicon-plus"></span> Quick Info</a></p>
                 </div>   
-            </div>   
+            </div> 
         </div>
+        
 
         <!-- Modal -->
         <div class="modal fade" id="myModal_<%= product.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
