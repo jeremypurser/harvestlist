@@ -1,15 +1,20 @@
-<div class="row">
-    <div class="col-lg-6">
-        <h1><%= @vendor.company %></h1>
-        <p><%= @vendor.name %></p>
-        <p><%= @vendor.location %></p>
-        <p><%= @vendor.bio%></p>
+<div class="row vendor-info">
+
+  <div class="col-lg-2">
+    <div class="vendor-avatar">
+      <%= image_tag @vendor.avatar.url, class:"img-circle" %>
     </div>
-    <div class="col-lg-3 vendor-avatar">
-        <%= image_tag @vendor.avatar.url, class:"img-circle" %>
-    </div>
+  </div>
+
+  <div class="col-lg-6">
+    <h1><%= @vendor.company %></h1>
+    <p><%= @vendor.name %></p>
+    <p><%= @vendor.location %></p>
+    <p><%= @vendor.bio%></p>
+  </div>
+    
 </div>
 
 <div class="row">
-    <%= render 'product_list' %>
+  <%= render 'product_list' %>
 </div>
