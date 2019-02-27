@@ -10,26 +10,21 @@ alt:"Responsive image" %>
 
 <p>
   <strong>Product Name:</strong>
-  <%= @product.name %>
+  <span class="capitalize"><%= @product.name %></span>
 </p>
 
 <p>
-  <strong>Quantity Unit:</strong>
-  <%= @product.unit %>
+  <strong>Price:</strong>
+  <%= number_to_currency @product.price %> per <%= @product.unit %>
 </p>
 
 <p>
-  <strong>Price Per Unit:</strong>
-  <%= @product.price %>
+  <strong>Available:</strong>
+  <%= @product.quantity %> <%= @product.unit %>s
 </p>
 
 <p>
-  <strong>Quantity Available:</strong>
-  <%= @product.quantity %>
-</p>
-
-<p>
-  <strong>Description of Product:</strong>
+  <strong>Notes:</strong>
   <%= @product.description %>
 </p>
 

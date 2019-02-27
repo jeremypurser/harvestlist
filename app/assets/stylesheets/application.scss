@@ -16,6 +16,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+// Global
 
 body {
   font-family: "Work Sans", sans-serif;
@@ -23,6 +24,10 @@ body {
 
 .container {
   padding-top: 5%;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
 
 // Form
