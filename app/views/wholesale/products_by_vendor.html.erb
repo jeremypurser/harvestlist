@@ -5,6 +5,9 @@
         <p><%= @vendor.location %></p>
         <p><%= @vendor.bio%></p>
     </div>
+    <div class="col-lg-3 vendor-avatar">
+        <%= image_tag @vendor.avatar.url %>
+    </div>
 </div>
 
 <div class="row">
