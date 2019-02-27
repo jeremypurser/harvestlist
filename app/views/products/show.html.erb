@@ -1,39 +1,43 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @product.image.url, class:"img-thumbnail img-responsive product-image", 
+alt:"Responsive image" %>
+
 <p>
-  <strong>Name:</strong>
+  <strong>Vendor:</strong>
+  <%= @product.user.company %>
+</p>
+
+<p>
+  <strong>Product Name:</strong>
   <%= @product.name %>
 </p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<p>
-  <strong>Unit:</strong>
+  <strong>Quantity Unit:</strong>
   <%= @product.unit %>
 </p>
 
 <p>
-  <strong>Quantity:</strong>
+  <strong>Price Per Unit:</strong>
+  <%= @product.price %>
+</p>
+
+<p>
+  <strong>Quantity Available:</strong>
   <%= @product.quantity %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Description of Product:</strong>
   <%= @product.description %>
 </p>
 
 <p>
   <strong>Category:</strong>
-  <%= @product.category_id %>
+  <%= @product.category.name %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @product.user_id %>
-</p>
 
 <% if current_user.id == @product.user_id %>
   <%= link_to 'Edit', edit_product_path(@product) %> |
