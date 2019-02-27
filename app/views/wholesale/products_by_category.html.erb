@@ -1,3 +1,7 @@
 <h1><%= @category.name %></h1>
-
+<ul class="category-list">
+  <% @categories.each do |category| %>
+    <li><%= link_to category.name, categories_path(category_id: category.id) %></li>
+  <% end %>
+</ul>
 <%= render 'product_list' %>
