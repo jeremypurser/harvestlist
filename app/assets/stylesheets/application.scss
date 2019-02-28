@@ -99,6 +99,7 @@ label {
 // Product Show Page
 
 .product-image {
+  margin-top: 1rem;
   width: 500px;
 }
 
@@ -106,11 +107,47 @@ label {
   font-size: 2rem;
 }
 
+.farm-link {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  border-bottom: 1px solid rgb(2, 146, 86);
+}
+
+.farm-link:hover {
+  text-decoration: none;
+  border-bottom: 2px solid rgb(20, 90, 61);
+}
+
+.padding-left {
+  padding-left: 0.5rem;
+}
+
+.category-card {
+  padding: 1% 2%;
+  margin: 0 1% 2% 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  font-size: 1rem;
+  font-weight: 500;
+  display: inline-block;
+  color: rgb(2, 146, 86);
+  background-color: rgb(129, 255, 202);
+  border-radius: 3%;
+}
+
+.category-card .micro-nav::before {
+  content: "\A";
+  white-space: pre;
+}
+
 // Category
 
 .category-list {
   padding-inline-start: 0px;
 }
+
 .category-list li {
   display: inline;
   padding-right: 1rem;

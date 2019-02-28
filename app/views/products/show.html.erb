@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
   <div class="col-lg-4 product-title"> 
-    <span class="capitalize"><%= @product.name %></span><span> from <%= @product.user.company %>  
+    <span class="capitalize padding-left"><%= @product.name %></span>&emsp;<%= link_to @product.user.company,vendors_path(user_id: @product.user_id), class: "farm-link" %>  
     <%= image_tag @product.image.url, class:"img-thumbnail img-responsive product-image", 
     alt:"Responsive image" %>
   </div>
@@ -13,24 +13,34 @@
     </p>
 
     <p>
-      <strong>Available:</strong>
-      <%= @product.quantity %> <%= @product.unit %>s
-    </p>
-
-    <p>
       <strong>Notes:</strong>
       <%= @product.description %>
     </p>
 
     <p>
-      <strong>Category:</strong>
-      <%= @product.category.name %>
+      <%= @product.quantity %> <%= @product.unit %>
+      <% if @product.unit[-1] != "s" %>s<% end %> in stock
     </p>
 
+    
+  
+    <div class="category-card status">
+      <%= link_to @product.category.name, categories_path(category_id: @product.category.id) %>
+    </div>
 
-    <% if current_user.id == @product.user_id %>
-      <%= link_to 'Edit', edit_product_path(@product) %> |
-    <% end %>
-    <%= link_to 'Back', :back %>
+    <div class="category-card">
+      <% if @product.quantity > 0 %>
+        Available
+      <% else %>
+        Sold Out
+      <% end %>
+    </div>
+
+    <div class="micro-nav">
+      <% if current_user.id == @product.user_id %>
+        <%= link_to 'Edit', edit_product_path(@product) %> |
+      <% end %>
+      <%= link_to 'Back', :back %>
+    </div>
   
 </div>
