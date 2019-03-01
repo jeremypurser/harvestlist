@@ -21,20 +21,23 @@
       <%= @product.quantity %> <%= @product.unit %>
       <% if @product.unit[-1] != "s" %>s<% end %> in stock
     </p>
-
-    
   
     <div class="category-card status">
-      <%= link_to @product.category.name, categories_path(category_id: @product.category.id) %>
-    </div>
-
-    <div class="category-card">
-      <% if @product.quantity > 0 %>
-        Available
-      <% else %>
-        Sold Out
+      <%= link_to categories_path(category_id: @product.category.id) do %>
+        <%= @emojis[@category.name] %>
+        <%= @category.name %>
       <% end %>
     </div>
+
+    <% if @product.quantity > 0 %>
+      <div class="available-card">
+        👍 Available
+      </div>
+    <% else %>
+      <div class="soldout-card">
+        💔 Sold Out
+      </div>
+    <% end %>
 
     <div class="micro-nav">
       <% if current_user.id == @product.user_id %>

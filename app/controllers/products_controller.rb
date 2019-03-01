@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
   before_action :authenticate_user!
   # GET /products
   # GET /products.json
+
   def index
     @products = Product.all
     @categories = Category.all
@@ -12,7 +13,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @product = Product.find(params[:id])
-    # @category = Category.find(params[:category_id])
+    @category = @product.category
   end
 
   # GET /products/new

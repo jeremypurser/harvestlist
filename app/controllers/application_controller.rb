@@ -3,8 +3,21 @@ class ApplicationController < ActionController::Base
     # For APIs, you may want to use :null_session instead.
     before_action :vendors
     before_action :categories
+    before_action :emojis
+
     protect_from_forgery with: :exception
     before_action :configure_permitted_parameters, if: :devise_controller?
+
+    def emojis
+        @emojis = { "Flowers" => "🌼",
+        "Herbs" => "🌱",
+        "Produce" => "🥕",
+        "Dairy" => "🧀",
+        "Eggs" => "🍳",
+        "Meat & Poultry" => "🥩",
+        "Seafood" => "🍤",
+        "Other" => "🔮" }
+    end
 
     def vendors
         @vendors = User.all
