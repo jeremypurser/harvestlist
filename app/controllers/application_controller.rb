@@ -7,9 +7,8 @@ class ApplicationController < ActionController::Base
 
     protect_from_forgery with: :exception
     before_action :configure_permitted_parameters, if: :devise_controller?
-
-    def emojis
-        @emojis = { "Flowers" => "🌼",
+    
+    EMOJIS = { "Flowers" => "🌼",
         "Herbs" => "🌱",
         "Produce" => "🥕",
         "Dairy" => "🧀",
@@ -17,6 +16,9 @@ class ApplicationController < ActionController::Base
         "Meat & Poultry" => "🥩",
         "Seafood" => "🍤",
         "Other" => "🔮" }
+
+    def emojis
+        @emojis = EMOJIS
     end
 
     def vendors
