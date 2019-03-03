@@ -1,2 +1,11 @@
-<h1>Epicenter#feed</h1>
-<p>Find me in app/views/epicenter/feed.html.erb</p>
+<h1>@<%= current_user.username %>'s HarvestList Feed</h1>
+
+
+<div>
+  <% @followed_farmers.each do |product| %>
+    <div>
+      <p>@<%= product.user.username %></p>
+      <p><%= product.name %></p>
+    </div>
+  <% end %>
+</div>

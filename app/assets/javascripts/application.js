@@ -17,3 +17,18 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).on("turbolinks:load", function() {
+  $(".unfollow-btn").hover(
+    function() {
+      $(this).html("Unfollow");
+      $(this).removeClass("btn-primary");
+      $(this).addClass("btn-danger");
+    },
+    function() {
+      $(this).html("Following");
+      $(this).removeClass("btn-danger");
+      $(this).addClass("btn-primary");
+    }
+  );
+});
