@@ -13,6 +13,9 @@
     <p><%= @vendor.name %></p>
     <p><%= @vendor.location %></p>
     <p><%= @vendor.bio%></p>
+    <% if current_user.id != @vendor.id %>
+    <%= link_to "Follow", following_path(id: @vendor.id), class: "btn btn-primary" %>
+<% end %>
   </div>
     
 </div>
