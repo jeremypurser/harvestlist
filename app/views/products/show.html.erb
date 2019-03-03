@@ -18,8 +18,7 @@
     </p>
 
     <p>
-      <%= @product.quantity %> <%= @product.unit %>
-      <% if @product.unit[-1] != "s" %>s<% end %> in stock
+      <%= @product.quantity %> <%= @product.unit %><% if @product.unit[-1] != "s" %>s<% end %> in stock
     </p>
   
     <div class="category-card status">
