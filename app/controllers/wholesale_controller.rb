@@ -1,6 +1,7 @@
 class WholesaleController < ApplicationController
+
   def all_products
-    @products = Product.all
+    @products = Product.all.page(params[:page])
   end
 
   def products_by_category
