@@ -20,6 +20,9 @@
 
 body {
   font-family: "Work Sans", sans-serif;
+  background-color: #ffda2f;
+  background-image: url(pattern_white.png);
+  background-repeat: repeat;
 }
 
 .container {
@@ -42,6 +45,10 @@ label {
 }
 
 // Product List
+
+// .shop-title {
+//   text-align: center;
+// }
 
 .well {
   overflow: auto;

@@ -1,5 +1,5 @@
 <div class="row">
-    <% @products.each do |product| %>
+    <% @products.order(created_at: :desc).each do |product| %>
         
         <%= link_to product do %>
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
@@ -16,21 +16,5 @@
             </div>
         <% end %>
         
-
-        <!-- Modal -->
-        <div class="modal fade" id="myModal_<%= product.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel"><%= product.name %></h4>
-                    </div>
-                    <div class="modal-body">
-                        <p><strong>Price:</strong> <%= number_to_currency product.price %></p>
-                        <p><strong>Info:</strong> <%= product.description %></p>
-                    </div>
-                </div>
-            </div>
-        </div>
     <% end %>
 </div>
