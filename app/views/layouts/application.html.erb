@@ -30,7 +30,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li>
-              <% if user_signed_in? %>
+              <% if user_signed_in? && current_user.role == "Seller" %>
                 <%= link_to new_product_path do %>
                   <span>New Product</span>
                 <% end %>
