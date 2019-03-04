@@ -11,6 +11,7 @@
   <div class="col-lg-6">
     <h1><%= @vendor.company %></h1>
     <p><%= @vendor.name %></p>
+    <p><%= @vendor.email %></p>
     <p><%= @vendor.location %></p>
     <p><%= @vendor.bio%></p>
     <% if current_user.id != @vendor.id %>
