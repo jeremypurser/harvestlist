@@ -33,6 +33,12 @@ body {
   text-transform: capitalize;
 }
 
+h1,
+.padding-left,
+.farm-link {
+  color: rgb(2, 146, 86);
+}
+
 // Form
 
 label {
@@ -46,20 +52,21 @@ label {
 
 // Product List
 
-// .shop-title {
-//   text-align: center;
-// }
-
 .well {
   overflow: auto;
   background-color: none;
   background-repeat: repeat;
   border: none;
   padding: 0;
+  box-shadow: -3px 3px #d2b21f;
 }
 
 .well:hover {
   background-image: url(pattern.gif);
+  box-shadow: none;
+  position: relative;
+  top: 3px;
+  right: 3px;
 }
 
 .well h3 {
