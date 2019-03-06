@@ -21,7 +21,7 @@
 /storage/*
 !/storage/.keep
 
-/node_modules
+node_modules
 /yarn-error.log
 
 /public/assets
@@ -30,8 +30,10 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-/node_modules
+
 /.eslintrc.json
 
 # Ignore application configuration
 /config/application.yml
+/public/
+
