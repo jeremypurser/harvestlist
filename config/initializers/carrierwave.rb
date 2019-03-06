@@ -8,4 +8,5 @@ config.fog_credentials = {
     }
 
     config.fog_directory = 'jpurser-harvestlist'
+    config.fog_public = true
 end
