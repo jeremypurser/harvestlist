@@ -80,8 +80,7 @@ gem 'pry-rails'
 gem 'better_errors', group: :development
 gem 'binding_of_caller' 
 gem 'kaminari'
+gem 'fog'
 gem 'figaro'
 gem 'certified'
-gem 'fog'
-gem 'aws-sdk', '~> 2'
-gem 'fog-google'
+
