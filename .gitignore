@@ -33,3 +33,5 @@
 /node_modules
 /.eslintrc.json
 /app/assets/images
+# Ignore application configuration
+/config/application.yml

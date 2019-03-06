@@ -1,15 +1,17 @@
 <h2>My Cart</h2>
 
-<div>
   <% @line_items.each do |line_item| %>
-    <li><%= line_item.product.name %></li>
-    <li><%= number_to_currency line_item.product.price %></li>
-    <li>Qty: <%= line_item.quantity %></li>
-    <li>Subtotal: <%= number_to_currency line_item.line_item_total %></li>
-    <li><%= link_to 'remove', remove_path(id: line_item.id), method: :delete %></li>
+    <ul class="view-order">
+      <li><%= image_tag line_item.product.image.url, class: "checkout-image" %> </li>
+      <li><%= line_item.product.name.capitalize %></li>
+      <li><%= number_to_currency line_item.product.price %></li>
+      <li>Qty: <%= line_item.quantity %></li>
+      <li>Subtotal: <%= number_to_currency line_item.line_item_total %></li>
+      <li><%= link_to 'remove', remove_path(id: line_item.id), method: :delete %></li>
+    </ul>
   <% end %>
-</div>
+
 
 <div>
-  <%= link_to "Proceed to Checkout?", checkout_path, class: "btn btn-success" %>
+  <%= link_to "Proceed to Checkout?", checkout_path, class: "btn btn-success checkout-btn" %>
 </div>

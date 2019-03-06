@@ -70,3 +70,4 @@ gem 'pry-rails'
 gem 'better_errors', group: :development
 gem 'binding_of_caller' 
 gem 'kaminari'
+gem 'figaro'

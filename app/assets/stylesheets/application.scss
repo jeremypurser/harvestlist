@@ -150,6 +150,7 @@ label {
   display: inline-block;
   color: rgb(2, 146, 86);
   background-color: rgb(129, 255, 202);
+  border: 1px solid rgb(0, 255, 149);
   border-radius: 3%;
 }
 
@@ -161,10 +162,19 @@ label {
   background-color: rgb(255, 101, 101);
 }
 
-available-card,
 .category-card .micro-nav::before {
   content: "\A";
   white-space: pre;
+}
+
+.show-info {
+  position: relative;
+  top: 1rem;
+}
+
+.show-info strong {
+  color: rgb(2, 146, 86);
+  text-transform: uppercase;
 }
 
 // Category
@@ -176,4 +186,27 @@ available-card,
 .category-list li {
   display: inline;
   padding-right: 1rem;
+}
+
+// View Order
+
+ul.view-order {
+  list-style-type: none;
+  margin: 0;
+  margin-top: 2rem;
+  padding: 0;
+}
+
+.view-order li {
+  display: inline;
+}
+
+.checkout-image {
+  object-fit: cover;
+  width: 70px;
+  height: 70px;
+}
+
+.checkout-btn {
+  margin-top: 2rem;
 }

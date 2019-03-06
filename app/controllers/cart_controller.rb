@@ -31,13 +31,21 @@ class CartController < ApplicationController
     line_items = LineItem.all
     @order = Order.create(user_id: current_user.id, total: 0)
 
+    sellers = []
     line_items.each do |line_item|
+      sellers.push(line_item.product.user)
       line_item.product.update(quantity: (line_item.product.quantity - line_item.quantity))
       @order.order_items[line_item.product_id] = line_item.quantity 
       @order.total += line_item.line_item_total
     end
+
+    email_sellers = sellers.uniq
     @order.save
 
+    email_sellers.each do |seller|
+      OrderMailer.order_email(seller, current_user).deliver_now
+    end
     line_items.destroy_all
   end
+
 end
