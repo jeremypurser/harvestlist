@@ -6,6 +6,7 @@
     <li><%= number_to_currency line_item.product.price %></li>
     <li>Qty: <%= line_item.quantity %></li>
     <li>Subtotal: <%= number_to_currency line_item.line_item_total %></li>
+    <li><%= link_to 'remove', remove_path(id: line_item.id), method: :delete %></li>
   <% end %>
 </div>
 

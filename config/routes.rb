@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   get 'store' => 'wholesale#all_products'
   get 'categories' => 'wholesale#products_by_category'
   get 'vendors' => 'wholesale#products_by_vendor'
+  delete 'remove' => 'cart#remove'
+  
+
   resources :products
   devise_for :users
 

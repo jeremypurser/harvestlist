@@ -14,6 +14,15 @@ class CartController < ApplicationController
     end
   end
 
+  def remove
+    line_item = LineItem.find(params[:id])
+    line_item.destroy
+    respond_to do |format|
+      format.html { redirect_to view_order_path, notice: 'Item ws removed' }
+      format.json { head :no_content }
+    end
+  end
+
   def view_order
     @line_items = LineItem.all
   end
