@@ -510,6 +510,7 @@ DEPENDENCIES
   devise
   figaro
   fog
+  fog-google
   font-awesome-rails
   jbuilder (~> 2.5)
   jquery-rails

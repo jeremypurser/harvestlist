@@ -29,9 +29,9 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-/public
+
 /node_modules
 /.eslintrc.json
-/app/assets/images
+
 # Ignore application configuration
 /config/application.yml
