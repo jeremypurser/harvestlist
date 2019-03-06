@@ -32,7 +32,6 @@ Rails.application.configure do
 
 # NOTE: do NOT use an email acct w/ 2-step auth enabled
 
-
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
@@ -66,7 +65,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:     'smtp.gmail.com',
     port:        587,
-    # domain:      'gmail.com',
+    domain:      'gmail.com',
     user_name:   "#{ENV['gmail_un']}@gmail.com",
     password:     "#{ENV['gmail_pw']}",
     # we want to use the Figaro gem to hide our UN & PW! 

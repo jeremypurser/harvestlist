@@ -6,7 +6,7 @@
     <li><%= Product.find(k).name %>, <%= v %></li>
   </ul>
 <% end %>
-
+<%= @email_sellers.length %>
 <p>
   <strong>Order Total:</strong> <%= number_to_currency @order.total %>
 </p>

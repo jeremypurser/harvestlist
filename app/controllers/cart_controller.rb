@@ -25,6 +25,7 @@ class CartController < ApplicationController
 
   def view_order
     @line_items = LineItem.all
+    @total = @line_items.pluck(:line_item_total).reduce(:+)
   end
 
   def checkout
@@ -41,7 +42,7 @@ class CartController < ApplicationController
 
     email_sellers = sellers.uniq
     @order.save
-
+    @email_sellers = email_sellers
     email_sellers.each do |seller|
       OrderMailer.order_email(seller, current_user).deliver_now
     end
