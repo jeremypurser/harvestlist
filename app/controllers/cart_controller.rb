@@ -2,10 +2,16 @@ class CartController < ApplicationController
   before_action :authenticate_user!, except: [:add_to_cart, :view_order]
 
   def add_to_cart
+    
     line_item = LineItem.create(product_id: params[:product_id], quantity: params[:quantity])
-    line_item.update(line_item_total: (line_item.quantity * line_item.product.price))
-    flash[:order] = "Successfully add to cart"
-    redirect_back(fallback_location: root_path)
+    if line_item.quantity != nil
+      line_item.update(line_item_total: (line_item.quantity * line_item.product.price))
+      flash[:order] = "Successfully add to cart"
+      redirect_back(fallback_location: root_path)
+    else 
+      flash[:bad_order] = "You must enter a quantity"
+      redirect_back(fallback_location: root_path)
+    end
   end
 
   def view_order

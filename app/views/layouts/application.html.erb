@@ -6,6 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,700" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -62,10 +63,15 @@
           </ul>
           
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "View Cart", view_order_path %></li>
+
+            <li>
+              <%= link_to view_order_path do %>
+                <i class="fas fa-shopping-cart"></i><span> View Cart</span>
+              <% end %>
+            </li>
             <% if user_signed_in? %>              
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@<%= current_user.username %> <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello @<%= current_user.username %> <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><%= link_to "Profile", vendors_path(user_id: current_user.id) %></li>
                   <li><%= link_to "Edit Profile", edit_user_registration_path %></li>

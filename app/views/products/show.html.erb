@@ -1,7 +1,3 @@
-<% if flash[:order] %>
-  <div id="notice"><%= flash[:order] %></div>
-<% end %>
-
 <div class="row">
   <div class="col-lg-4 product-title"> 
   
@@ -43,6 +39,11 @@
       </div>
     <% end %>
 
+    <% if flash[:order] %>
+      <div id="notice"><%= flash[:order] %></div>
+    <% elsif flash[:bad_order] %>
+      <div id="notice"><%= flash[:bad_order] %></div>
+    <% end %>
     
     <div class="form-inline">
     
