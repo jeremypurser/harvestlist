@@ -43,13 +43,18 @@
       </div>
     <% end %>
 
-    <p>
-      <%= form_tag add_to_cart_path do %>
-        <%= hidden_field_tag :product_id, @product.id %>
-        <%= number_field_tag :quantity, nil, placeholder: @order_amount %>
-        <%= submit_tag "Add to Cart", class: "btn btn-primary" %>
-      <% end %>
-    </p>
+    
+    <div class="form-inline">
+    
+      <div class="form-group">
+        <%= form_tag add_to_cart_path do %>
+          <%= label_tag "Order: " %>
+          <%= hidden_field_tag :product_id, @product.id %>
+          <%= number_field_tag :quantity, nil, placeholder: @order_amount, class: "form-control" %>
+          <%= submit_tag "Add to Cart", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
 
     <div class="micro-nav">
       <% if current_user.id == @product.user_id %>
