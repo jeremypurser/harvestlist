@@ -1,25 +1,29 @@
-<h2>My Cart</h2>
+<% if @line_items.length != 0 %>
+  <h2>My Cart</h2>
 
-  <% @line_items.each do |line_item| %>
-    <ul class="view-order">
-      <li><%= image_tag line_item.product.image.url, class: "checkout-image" %> </li>
-      <li><%= line_item.product.name.capitalize %></li>
-      <li><%= number_to_currency line_item.product.price %><%= "/#{line_item.product.unit} | " %></li>
-      <li>Qty: <%= line_item.quantity %> <%= line_item.product.unit %><%= "s" if line_item.quantity > 1 %> |</li>
-      <li>Subtotal: <%= number_to_currency line_item.line_item_total %></li>
-      <br>
-      <li class="remove">
-      <%= link_to remove_path(id: line_item.id), method: :delete do %>
-      <i class="fas fa-trash-alt"></i> Remove<% end %></li>
-    </ul>
-  <% end %>
+    <% @line_items.each do |line_item| %>
+      <ul class="view-order">
+        <li><%= image_tag line_item.product.image.url, class: "checkout-image" %> </li>
+        <li><%= line_item.product.name.capitalize %></li>
+        <li><%= number_to_currency line_item.product.price %><%= "/#{line_item.product.unit} | " %></li>
+        <li>Qty: <%= line_item.quantity %> <%= line_item.product.unit %><%= "s" if line_item.quantity > 1 %> |</li>
+        <li>Subtotal: <%= number_to_currency line_item.line_item_total %></li>
+        <br>
+        <li class="remove">
+        <%= link_to remove_path(id: line_item.id), method: :delete do %>
+        <i class="fas fa-trash-alt"></i> Remove<% end %></li>
+      </ul>
+    <% end %>
 
-  <div class="total">
-    <span>Total</span>
-    <%= number_to_currency @total %>
+    <div class="total">
+      <span>Total</span>
+      <%= number_to_currency @total %>
+    </div>
+
+
+  <div>
+    <%= link_to "Proceed to Checkout?", checkout_path, class: "btn btn-success checkout-btn" %>
   </div>
-
-
-<div>
-  <%= link_to "Proceed to Checkout?", checkout_path, class: "btn btn-success checkout-btn" %>
-</div>
+<% else %>
+  <h2>The Cart Is Empty</h2>
+<% end %>
