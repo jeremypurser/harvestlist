@@ -80,7 +80,7 @@ gem 'pry-rails'
 gem 'better_errors', group: :development
 gem 'binding_of_caller' 
 gem 'kaminari'
-gem 'fog'
+gem 'fog-aws'
 gem 'figaro'
 gem 'certified'
 gem 'carrierwave-google-storage'
