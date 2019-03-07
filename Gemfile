@@ -83,4 +83,3 @@ gem 'kaminari'
 gem 'fog-aws'
 gem 'figaro'
 gem 'certified'
-gem "aws-sdk-s3", require: false
