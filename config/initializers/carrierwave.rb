@@ -8,6 +8,6 @@ CarrierWave.configure do |config|
   }
   config.fog_directory  = "#{ENV['S3_BUCKET']}"
   config.cache_dir = "#{Rails.root}/tmp/uploads"
-  config.asset_host = "https://s3-#{ENV["S3_REGION"]}.amazonaws.com"
+  # config.asset_host = "https://s3-#{ENV["S3_REGION"]}.amazonaws.com"
 
 end  
