@@ -83,4 +83,4 @@ gem 'kaminari'
 gem 'fog-aws'
 gem 'figaro'
 gem 'certified'
-gem 'carrierwave-google-storage'
+gem "aws-sdk-s3", require: false
