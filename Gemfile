@@ -83,4 +83,4 @@ gem 'kaminari'
 gem 'fog'
 gem 'figaro'
 gem 'certified'
-
+gem 'carrierwave-google-storage'
