@@ -106,13 +106,19 @@ label {
 
 .vendor-avatar {
   margin-top: 2.5rem;
-}
-
-.vendor-avatar img {
   width: 150px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
-// Product Show Page
+.profile-pic {
+  display: inline;
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+}
 
 .product-image {
   margin-top: 1rem;
