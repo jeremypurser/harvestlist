@@ -106,18 +106,20 @@ label {
 
 .vendor-avatar {
   margin-top: 2.5rem;
-  width: 150px;
-  height: 150px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
+  // width: 150px;
+  // height: 150px;
+  // position: relative;
+  // overflow: hidden;
+  // border-radius: 50%;
 }
 
 .profile-pic {
   display: inline;
-  margin: 0 auto;
-  height: auto;
-  width: 100%;
+  object-fit: cover;
+  object-position: top left;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 
 .product-image {
