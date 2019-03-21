@@ -12,16 +12,12 @@ Harvest List is my final project for the Code Immersion web development course a
 ![Harvest List Screenshot](http://www.jeremypurser.com/assets/images/hl_ss_3.png)
 
 ## Tech/framework used
-Ex. -
+Built with
+* Ruby on Rails
+* Bootstrap
+* HTML / CSS
+* jQuery
 
-<b>Built with</b>
-- [Electron](https://electron.atom.io)
-
-## Features
-What makes your project stand out?
-
-## Code Example
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
 
 ## Installation
 To run locally, clone the repository and `cd` into the app's directory. Within the directory on the command line run `bundle install` to install the gem file dependencies. Then start the server with `rails server`.
