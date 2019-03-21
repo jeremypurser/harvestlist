@@ -1,24 +1,12 @@
-# README
+## Harvest List
+[Harvest List][heroku] is a social media marketplace app for chefs to follow the farms they work with, and for farmers to quickly update their inventory.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Motivation
+Harvest List is my final project for the Code Immersion web development course at Tech Talent South, Raleigh. I wanted to make something that I thought would be useful to communities I was familiar with. I have previously worked at [farms](http://www.fourleaffarm.org/) and restaurants, and thought this could be a tool to streamline the process selling produce and buying ingredients.
+ 
+## Screenshots
+![Harvest List Screenshot](![alt text](http://www.jeremypurser.com/assets/images/hl_ss_1.png "Logo Title Text 1")
 
-Things you may want to cover:
+![Harvest List Screenshot](![alt text](http://www.jeremypurser.com/assets/images/hl_ss_2.png "Logo Title Text 1")
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Harvest List Screenshot](![alt text](http://www.jeremypurser.com/assets/images/hl_ss_3.png "Logo Title Text 1")
