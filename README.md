@@ -5,8 +5,8 @@
 Harvest List is my final project for the Code Immersion web development course at Tech Talent South, Raleigh. I wanted to make something that I thought would be useful to communities I was familiar with. I have previously worked at [farms](http://www.fourleaffarm.org/) and restaurants, and thought this could be a tool to streamline the process selling produce and buying ingredients.
  
 ## Screenshots
-![Harvest List Screenshot](![alt text](http://www.jeremypurser.com/assets/images/hl_ss_1.png "Logo Title Text 1")
+![Harvest List Screenshot](http://www.jeremypurser.com/assets/images/hl_ss_1.png)
 
-![Harvest List Screenshot](![alt text](http://www.jeremypurser.com/assets/images/hl_ss_2.png "Logo Title Text 1")
+![Harvest List Screenshot](http://www.jeremypurser.com/assets/images/hl_ss_2.png)
 
-![Harvest List Screenshot](![alt text](http://www.jeremypurser.com/assets/images/hl_ss_3.png "Logo Title Text 1")
+![Harvest List Screenshot](http://www.jeremypurser.com/assets/images/hl_ss_3.png)
