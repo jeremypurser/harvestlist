@@ -1,24 +1,35 @@
-# README
+## Harvest List
+[Harvest List][heroku] is a social media marketplace app for chefs to follow the farms they work with, and for farmers to quickly update their inventory.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Motivation
+Harvest List is my final project for the Code Immersion web development course at Tech Talent South, Raleigh. I wanted to make something that I thought would be useful to communities I was familiar with. I have previously worked at [farms](http://www.fourleaffarm.org/) and restaurants, and thought this could be a tool to streamline the process selling produce and buying ingredients.
+ 
+## Screenshots
+![Harvest List Screenshot](http://www.jeremypurser.com/assets/images/hl_ss_1.png)
 
-Things you may want to cover:
+![Harvest List Screenshot](http://www.jeremypurser.com/assets/images/hl_ss_2.png)
 
-* Ruby version
+![Harvest List Screenshot](http://www.jeremypurser.com/assets/images/hl_ss_3.png)
 
-* System dependencies
+## Tech/framework used
+Built with
+* Ruby on Rails
+* Bootstrap
+* HTML / CSS
+* jQuery
 
-* Configuration
 
-* Database creation
+## Installation
+To run locally, clone the repository and `cd` into the app's directory. Within the directory on the command line run `bundle install` to install the gem file dependencies. Then start the server with `rails server`.
 
-* Database initialization
 
-* How to run the test suite
+## How to use?
+As you sign up you choose a `role`, a seller or a buyer, which would be a farmer or chef, respectively. As a farmer you have the ability to upload new products. As a chef you have the ability to to follow farmers to create a feed of new products from the farms you follow, as well as the ability to buy those products.
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+## Credits
+This project was completed under the tutelage of Brian Sowers and Tech Talent South, Raleigh. I had help from Andrew Dally deploying the app to [Heroku][heroku] and Amazon S3. 
+
+
+[heroku]: https://harvestlist.herokuapp.com/
