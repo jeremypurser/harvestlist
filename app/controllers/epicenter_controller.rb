@@ -1,12 +1,20 @@
 class EpicenterController < ApplicationController
-  def feed
+  
+  def feed 
+    if current_user
+      create_feed
+    else
+      redirect_to store_path
+    end
+  end
+  
+  def create_feed
     @products = []
     Product.all.each do |product|
       if current_user.following.include?(product.user_id) || current_user.id == product.user_id
         @products.push(product)
       end
     end
-
   end
 
   def show_user

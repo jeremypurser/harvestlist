@@ -1,35 +1,27 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
-  # GET /products
-  # GET /products.json
+  # before_action :authenticate_user!
 
   def index
     @products = Product.all.page(params[:page])
     @categories = Category.all
   end
 
-  # GET /products/1
-  # GET /products/1.json
   def show
     @product = Product.find(params[:id])
     @category = @product.category
     @order_amount = "How many #{@product.unit}s?"
   end
 
-  # GET /products/new
   def new
     @product = Product.new
     @categories = Category.all
   end
 
-  # GET /products/1/edit
   def edit
     @categories = Category.all
   end
 
-  # POST /products
-  # POST /products.json
   def create
     @product = Product.new(product_params)
 
@@ -44,8 +36,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /products/1
-  # PATCH/PUT /products/1.json
   def update
     respond_to do |format|
       if @product.update(product_params)
@@ -58,8 +48,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  # DELETE /products/1
-  # DELETE /products/1.json
   def destroy
     @product.destroy
     respond_to do |format|
@@ -69,12 +57,11 @@ class ProductsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    
     def set_product
       @product = Product.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
       params.require(:product).permit(:name, :price, :quantity, :unit, :description, :category_id, :image, :user_id)
     end

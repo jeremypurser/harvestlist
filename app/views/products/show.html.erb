@@ -30,7 +30,7 @@
       <% end %>
     </div>
 
-    <% if @product.quantity > 0 %>
+    <% if @product.quantity.positive? %>
       <div class="available-card">
         👍 Available
       </div>

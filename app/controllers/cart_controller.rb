@@ -1,5 +1,5 @@
 class CartController < ApplicationController
-  before_action :authenticate_user!, except: [:add_to_cart, :view_order]
+  before_action :authenticate_user!, except: [:view_order]
 
   def add_to_cart
     
