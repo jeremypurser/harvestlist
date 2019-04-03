@@ -85,3 +85,4 @@ gem 'figaro'
 gem 'certified'
 gem 'mini_magick'
 gem "aws-sdk-s3", require: false
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
