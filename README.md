@@ -32,7 +32,8 @@ To run locally, clone the repository and `cd` into the app's directory. Within t
 
 As you sign up you choose a `role`, a seller or a buyer, which would be a farmer or chef, respectively. As a farmer you have the ability to upload new products. As a chef you have the ability to to follow farmers to create a feed of new products from the farms you follow, as well as the ability to buy those products.
 
-You must sign up with a role of buyer to purchase products. You can pay with a test card using a [test card](https://stripe.com/docs/testing#cards).
+You must sign up with a role of buyer to purchase products. You can pay with a test card using a [test card number](https://stripe.com/docs/testing#cards).
+
 ![Stripe Payment Screenshot](http://jeremypurser.com/assets/images/hl_ss_4.png)
 
 ## Credits
