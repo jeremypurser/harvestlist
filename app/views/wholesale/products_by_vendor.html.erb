@@ -10,19 +10,17 @@
 
   <div class="col-lg-6">
     <h1><%= @vendor.company %></h1>
-    <p><%= @vendor.name %></p>
-    <p><%= @vendor.location %></p>
-    <p><%= @vendor.bio%></p>
-    <% if current_user.id != @vendor.id %>
-    
+    <p class="name"><i class="fas fa-tractor"></i> <%= @vendor.name %></p>
+    <p class="location"><i class="fas fa-compass"></i> <%= @vendor.location %></p>
+  <p class="bio"><i class="fas fa-paragraph"></i> <%= @vendor.bio%></p>
 
-    <% if current_user.following.include?(@vendor.id) %>
-      <%= link_to 'Following', unfollow_path(id: @vendor.id), class: "btn btn-primary unfollow-btn" %>
-    <% elsif current_user.id != @vendor.id %>
-      <%= link_to 'Follow', following_path(id: @vendor.id), class: "btn btn-primary" %>
-    <% end %>
-
-<% end %>
+    <% if current_user && current_user.id != @vendor.id %>   
+      <% if current_user.following.include?(@vendor.id) %>
+        <%= link_to 'Following', unfollow_path(id: @vendor.id), class: "btn btn-primary unfollow-btn" %>
+      <% elsif current_user.id != @vendor.id %>
+        <%= link_to 'Follow', following_path(id: @vendor.id), class: "btn btn-primary" %>
+      <% end %>
+  <% end %>
   </div>
     
 </div>

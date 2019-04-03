@@ -8,5 +8,5 @@ class User < ApplicationRecord
   has_many :orders
   serialize :following, Array
   mount_uploader :avatar, AvatarUploader
-  # mount_uploader :avatar, AvatarUploader
+
 end
