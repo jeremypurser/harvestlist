@@ -1,8 +1,10 @@
 {
   "name": "harvest-list-app",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "js-yaml": "^3.13.1"
+  },
   "devDependencies": {
-    "eslint": "^5.14.1"
+    "eslint": "^5.16.0"
   }
 }
