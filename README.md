@@ -36,8 +36,4 @@ You must sign up with a role of buyer to purchase products. You can pay with a t
 
 ![Stripe Payment Screenshot](http://jeremypurser.com/assets/images/hl_ss_4.png)
 
-## Credits
-
-This project was completed under the tutelage of Brian Sowers and Tech Talent South, Raleigh. I had help from Andrew Dally deploying the app to [Heroku][heroku] and Amazon S3.
-
 [heroku]: https://harvestlist.herokuapp.com/
